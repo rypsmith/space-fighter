@@ -7,6 +7,7 @@ enum SpriteKindLegacy {
 scene.onHitTile(SpriteKindLegacy.Enemy, 15, function (sprite) {
     info.changeScoreBy(-5)
     sprite.destroy()
+    controller.startLightPulse(0xff0000, 500)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (numberMissiles < 3) {
